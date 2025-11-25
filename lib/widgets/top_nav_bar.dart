@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
   static const double _vPad = 12;
-  static const double _logoHeight = 92;
+  static const double _logoHeight = 72;
   static const double _gapLogoToMenu = 140;
   static const double _logoShiftRight = 68; // move logo right without shifting following items
   static const double _logoScaleX = 1.30; // widen logo more than height increase
@@ -60,7 +60,7 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
                         child: Transform.scale(
                           scaleX: _logoScaleX,
                           scaleY: 1.0,
-                          child: Image.asset('asset/varahi1.png', fit: BoxFit.fitHeight),
+                          child: Image.asset('asset/Sri.png', fit: BoxFit.fitHeight),
                         ),
                       ),
                       SizedBox(width: _gapLogoToMenu - _logoShiftRight),
