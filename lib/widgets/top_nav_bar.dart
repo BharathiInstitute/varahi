@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
   static const double _vPad = 12;
-  static const double _logoHeight = 72;
+  static const double _logoHeight = 110;
+  static const double _logoWidth = 220;
   static const double _gapLogoToMenu = 140;
   static const double _logoShiftRight = 68; // move logo right without shifting following items
-  static const double _logoScaleX = 1.30; // widen logo more than height increase
   // Reduced gap after search to pull wishlist icon left
   static const double _gapAfterSearch = 30; // was 60
   // Reduced gaps to pull cart & auth button left
@@ -57,10 +57,11 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
                       SizedBox(width: _logoShiftRight),
                       SizedBox(
                         height: _logoHeight,
-                        child: Transform.scale(
-                          scaleX: _logoScaleX,
-                          scaleY: 1.0,
-                          child: Image.asset('asset/Sri.png', fit: BoxFit.fitHeight),
+                        width: _logoWidth,
+                        child: Image.asset(
+                          'asset/Sri.png',
+                          fit: BoxFit.contain,
+                          filterQuality: FilterQuality.high,
                         ),
                       ),
                       SizedBox(width: _gapLogoToMenu - _logoShiftRight),
